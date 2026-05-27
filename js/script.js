@@ -15,7 +15,6 @@ document.getElementById("fetchData").addEventListener("click", getRandomQuote);
 
 function getRandomQuote() {
   // Clear out any stale errors from a previous click attempt
-
   clearDisplayErrors();
   // OLD LOCAL WAY: fetch("random_quotes.php")
   // NEW REMOTE API WAY:
@@ -47,7 +46,7 @@ function getRandomQuote() {
       .catch(error => {
           handleError("API Fetch Failure: " + error.message);
       });
-  };
+  }
   
 function handleRoutingError(error) {
   const errorMessage = `⚠️ FETCH FAILURE DETAILS:\n-------------------------\nMessage: ${error.message}\nType: ${error.name}`;
